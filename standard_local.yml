@@ -13,6 +13,9 @@ dependencies:
   - scikit-image
   - pytest
   - future
+  - flake8
   - pip:
     - codecov
     - pytest-cov
+    - jupyter_contrib_nbextensions
+    - jupyter_nbextensions_configurator

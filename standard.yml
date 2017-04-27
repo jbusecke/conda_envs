@@ -16,6 +16,8 @@ dependencies:
   - pip:
     - codecov
     - pytest-cov
+    - jupyter_contrib_nbextensions
+    - jupyter_nbextensions_configurator
     - "--editable=git+https://github.com/xgcm/xmitgcm.git@master#egg=xmitgcm"
     - "--editable=git+https://github.com/xgcm/xgcm.git@master#egg=xgcm"
     - "--editable=git+https://github.com/jbusecke/xarrayutils.git@master#egg=xarrayutils"
