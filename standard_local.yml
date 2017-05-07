@@ -17,6 +17,7 @@ dependencies:
   - future
   - flake8
   - pip:
+    - yapf
     - codecov
     - pytest-cov
     - jupyter_contrib_nbextensions

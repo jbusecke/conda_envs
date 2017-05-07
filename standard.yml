@@ -16,6 +16,7 @@ dependencies:
   - pytest
   - future
   - pip:
+    - yapf
     - codecov
     - pytest-cov
     - jupyter_contrib_nbextensions
