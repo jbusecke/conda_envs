@@ -7,6 +7,7 @@ dependencies:
   - basemap
   - netcdf4
   - jupyter
+  - astropy
   - dask
   - numpy
   - scipy
