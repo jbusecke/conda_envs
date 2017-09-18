@@ -17,6 +17,9 @@ dependencies:
   - future
   - flake8
   - cartopy
+  - ioam
+  - holoviews
+  - geoviews
   - pip:
     - yapf
     - codecov
