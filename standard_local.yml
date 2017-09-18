@@ -16,6 +16,7 @@ dependencies:
   - pytest
   - future
   - flake8
+  - cartopy
   - pip:
     - yapf
     - codecov

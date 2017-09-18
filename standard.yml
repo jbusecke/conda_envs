@@ -15,6 +15,7 @@ dependencies:
   - scikit-image
   - pytest
   - future
+  - cartopy
   - pip:
     - yapf
     - codecov
