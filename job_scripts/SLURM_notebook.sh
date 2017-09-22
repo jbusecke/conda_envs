@@ -2,10 +2,10 @@
 
 #SBATCH --account=geo
 #SBATCH --exclusive
-#SBATCH -N 2
+#SBATCH -N 1
 #SBATCH --ntasks-per-node=16
 #SBATCH -J notebook
-#SBATCH --time=2:00:00
+#SBATCH --time=1:00:00
 #SBATCH --mail-user=jbusecke@princeton.edu
 #SBATCH --mail-type=ALL
 
