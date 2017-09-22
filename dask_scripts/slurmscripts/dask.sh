@@ -24,7 +24,7 @@ DASKDIR=~/.dask_tmp
 source activate standard
 export XDG_RUNTIME_DIR=""
 rm -f scheduler.json
-mpirun --np 4 dask-mpi --nthreads 4 --memory-limit 16e9 --bokeh-port 7771 --interface em1 --local-directory $DASKDIR
+mpirun --np 4 dask-mpi --nthreads 4 --memory-limit 15e9 --bokeh-port 7771 --interface em1 --local-directory $DASKDIR
 #ib0
 
 #--interface ib0

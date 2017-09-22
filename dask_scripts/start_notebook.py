@@ -26,4 +26,5 @@ def start_jlab(dask_scheduler):
 
 client.run_on_scheduler(start_jlab)
 
-print("ssh -N -L %s:%s:%s -L %s:%s:%s %s" % (b_port, host, b_port, port, host, port, hostname))
+# print("ssh -N -L %s:%s:%s -L %s:%s:%s %s" % (b_port, host, b_port, port, host, port, hostname))
+ print("%s" % host)
