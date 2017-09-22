@@ -1,9 +1,10 @@
 #/bin/bash
 
 NODENAME=$1
-PORT=9998
 
 # Link a notebook running on tiger to current machine
 # assumes that 'tiger' is defined in the ssh config file
-ssh -N -f -L $PORT:$NODENAME:$PORT tiger
-open --new -a /Applications/Google\ Chrome.app --args "http://localhost:$PORT"
+open -na /Applications/Google\ Chrome.app --args "http://localhost:7772" "http://localhost:7771/status"
+# ssh -N -f -L 7771:$NODENAME:7771 -L 7772:$NODENAME:7772 tiger
+ssh -N -L 7771:$NODENAME:7771 -L 7772:$NODENAME:7772 tiger
+# open --new -a /Applications/Google\ Chrome.app --args "http://localhost:7772" "http://localhost:7771/status"
