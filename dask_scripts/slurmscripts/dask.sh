@@ -1,12 +1,9 @@
 #!/bin/bash
-#PBS -N sample
-#!/bin/bash
-
 #SBATCH --account=geo
 #SBATCH --exclusive
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=16
-#SBATCH -J dask
+#SBATCH -J dask_host
 #SBATCH --time=06:00:00
 #SBATCH --mail-user=jbusecke@princeton.edu
 #SBATCH --mail-type=ALL
@@ -25,7 +22,7 @@ rm -r $DASKDIR/worker*
 source activate standard
 export XDG_RUNTIME_DIR=""
 rm -f scheduler.json
-mpirun --np 4 dask-mpi --nthreads 4 --memory-limit 'auto' --bokeh-port 7771 --interface ib0 --local-directory $DASKDIR
+mpirun --np 4 dask-mpi --nthreads 4 --memory-limit 'auto' --bokeh-port 7771 --interface em1 --local-directory $DASKDIR
 #ib0
 # --interface em1
 
