@@ -1,11 +1,10 @@
 #!/bin/bash
 DASKDIR=~/.dask_tmp
 
+# This script sets up a dask scheduler on a local cluster (tigressdata/princeton in this case). No need to invoke 'ib0' here since the processors are all linked locally?
 source activate standard
+
+cd $HOME
 rm scheduler.json
-dask-scheduler --local-directory $DASKDIR --bokeh-port 9991 --scheduler-file scheduler.json --interface 'ib0' &
-# -interface 'ib0' lets see if the dashboard works without this...
-dask-worker --scheduler-file scheduler.json --nthreads 2 --nprocs 15 --local-directory $DASKDIR --interface 'ib0' &
-
-
-#python start_notebook.py
+dask-scheduler --bokeh-port 9991 --local-directory $DASKDIR --scheduler-file scheduler.json &
+dask-worker --nthreads 1 --nprocs 15 --local-directory $DASKDIR --scheduler-file scheduler.json &
