@@ -3,7 +3,7 @@ channels:
   - conda-forge
 dependencies:
   - xarray
-  - basemap
+  # - basemap
   - netcdf4
   - jupyter
   - astropy
@@ -20,9 +20,12 @@ dependencies:
   - ioam
   - holoviews
   - geoviews
+  - line_profiler
+  - jupyterlab
   - pip:
     - yapf
     - codecov
     - pytest-cov
+    - fpdf
     - jupyter_contrib_nbextensions
     - jupyter_nbextensions_configurator

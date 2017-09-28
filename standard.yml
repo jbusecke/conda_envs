@@ -17,12 +17,15 @@ dependencies:
   - future
   - cartopy
   - ioam
-  - holoviews 
+  - holoviews
   - geoviews
+  - line_profiler
+  - jupyterlab
   - pip:
     - yapf
     - codecov
     - pytest-cov
+    - fpdf
     - jupyter_contrib_nbextensions
     - jupyter_nbextensions_configurator
     - "--editable=git+https://github.com/xgcm/xmitgcm.git@master#egg=xmitgcm"
