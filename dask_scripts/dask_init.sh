@@ -6,5 +6,7 @@ source activate standard
 
 cd $HOME
 rm scheduler.json
+
+echo ${pwd}
 dask-scheduler --bokeh-port 9991 --local-directory $DASKDIR --scheduler-file scheduler.json &
-dask-worker --nthreads 1 --nprocs 15 --local-directory $DASKDIR --scheduler-file scheduler.json &
+dask-worker --nthreads 2 --nprocs 10 --local-directory $DASKDIR --scheduler-file scheduler.json &
