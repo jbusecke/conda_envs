@@ -22,9 +22,5 @@ rm -r $DASKDIR/worker*
 source activate standard
 export XDG_RUNTIME_DIR=""
 rm -f scheduler.json
-mpirun --np 4 dask-mpi --nthreads 4 --memory-limit 'auto' --bokeh-port 7771 --interface em1 --local-directory $DASKDIR
-#ib0
-# --interface em1
-
-#--interface ib0
+mpirun --np 4 dask-mpi --nthreads 4 --memory-limit 'auto' --bokeh-port 7771 --interface ib0 --local-directory $DASKDIR
 
