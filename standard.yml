@@ -18,8 +18,6 @@ dependencies:
   - pytest
   - future
   - cartopy
-  - holoviews
-  - geoviews
   - line_profiler
   - jupyterlab
   - pip:
