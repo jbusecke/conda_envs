@@ -16,7 +16,6 @@ dependencies:
   - pytest
   - future
   - cartopy
-  - ioam
   - holoviews
   - geoviews
   - line_profiler
