@@ -8,6 +8,8 @@ dependencies:
   - jupyter
   - astropy
   - dask
+  - distributed
+  - mpi4py
   - numpy
   - scipy
   - seaborn
