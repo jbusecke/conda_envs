@@ -1,8 +1,6 @@
 from dask.distributed import Client
-import sys
 import socket
 
-print(hostname)
 client = Client(scheduler_file='scheduler.json')
 print(client)
 
