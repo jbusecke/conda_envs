@@ -6,13 +6,20 @@ HOST="$(hostname)"
 
 # set port and process parameters according to hostname
 if [[ $HOST == 'tigressdata' ]]; then
+  echo "GFDL-ANALYSIS host recognized"
   bport=9991
   nthreads=2
   nprocs=10
 elif [[ $HOST == "an"* ]]; then
+  echo "GFDL-ANALYSIS host recognized"
   bport=8881
   nthreads=1
   nprocs=14
+else
+  echo "!!! host NOT recognized !!!"
+  bport=9991
+  nthreads=2
+  nprocs=10
 fi
 
 source activate standard
