@@ -13,7 +13,7 @@ elif 'an' in sys.argv[1]:
 else:
     hostname = 'not recognized'
     port = 6662
-        raise RuntimeError('hostname not recognized')
+    raise RuntimeError('hostname not recognized')
 
 
 print(hostname)
