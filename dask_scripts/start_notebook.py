@@ -9,6 +9,10 @@ elif sys.argv[1] == 'tigressdata.princeton.edu':
     hostname = 'tigress'
     port = 9992
     b_port = 9991
+elif 'an' in sys.argv[1]:
+    hostname = 'gfdl_analysis'
+    port = 8882
+    b_port = 8881
 else:
         raise RuntimeError('hostname not recognized')
 
@@ -16,13 +20,16 @@ else:
 client = Client(scheduler_file='scheduler.json')
 print(client)
 
+
 import socket
 host = client.run_on_scheduler(socket.gethostname)
+
 
 def start_jlab(dask_scheduler):
     import subprocess
     proc = subprocess.Popen(['jupyter', 'lab', '--ip', host, '--no-browser','--port',str(port)])
     dask_scheduler.jlab_proc = proc
+
 
 client.run_on_scheduler(start_jlab)
 
