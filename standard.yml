@@ -2,7 +2,7 @@ name: standard
 channels:
   - conda-forge
 dependencies:
-  - xarray
+  # - xarray
   - basemap
   - netcdf4
   - jupyter
@@ -27,6 +27,9 @@ dependencies:
     - fpdf
     - jupyter_contrib_nbextensions
     - jupyter_nbextensions_configurator
+    https://github.com/pydata/xarray.git
+    - "--editable=git+https://github.com/pydata/xarray.git@master#egg=xarray"
+    - "--editable=git+https://github.com/jbusecke/jbusecke_cm2.6.git@master#egg=jbusecke_cm2.6"
     - "--editable=git+https://github.com/xgcm/xmitgcm.git@master#egg=xmitgcm"
     - "--editable=git+https://github.com/xgcm/xgcm.git@master#egg=xgcm"
     - "--editable=git+https://github.com/jbusecke/xarrayutils.git@master#egg=xarrayutils"
